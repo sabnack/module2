@@ -9,5 +9,10 @@ namespace BugTracking
     class Feature:Task
     {
         public const int Priority = 1;
+
+        public Feature(int number, string description, int complexity)
+            : base(number, description, complexity)
+        {
+        }
     }
 }
