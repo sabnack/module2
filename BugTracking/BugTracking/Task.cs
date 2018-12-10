@@ -13,6 +13,12 @@ namespace BugTracking
         public string Status { get; set; }
         public int Complexity { get; set; }
 
-
+        public Task(int number, string description, int complexity, string status = "ToDo")
+        {
+            Number = number;
+            Description = description;
+            Status = status;
+            Complexity = complexity;
+        }
     }
 }
