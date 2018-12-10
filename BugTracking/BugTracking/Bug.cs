@@ -10,5 +10,11 @@ namespace BugTracking
     {
         public Task Feature { get; set; }
         public const int Priority = 2;
+
+        public Bug(int number, string description, int complexity, Task feature)
+            :base(number, description, complexity)
+        {
+            Feature = feature;
+        }
     }
 }
