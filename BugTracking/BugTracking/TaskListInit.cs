@@ -22,13 +22,13 @@ namespace BugTracking
                 switch (choice)
                 {
                     case 0:
-                        tasksList.Add(new Feature("Feature", new Random().Next(1, 4)));
+                        tasksList.Add(new Feature("Feature", rnd.Next(1, 4)));
                         break;
                     case 1:
-                        tasksList.Add(new Bug("Bug", new Random().Next(1, 4)));
+                        tasksList.Add(new Bug("Bug", rnd.Next(1, 4)));
                         break;
                     case 2:
-                        tasksList.Add(new TechicalDebt("TechDebt", new Random().Next(1, 4)));
+                        tasksList.Add(new TechicalDebt("TechDebt", rnd.Next(1, 4)));
                         break;
                 }
             }
