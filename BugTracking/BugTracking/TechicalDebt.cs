@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace BugTracking
 {
-    class TechicalDebt:Task
+    class TechicalDebt : Task
     {
-        public const double Priority = 0.5;
-
-        public TechicalDebt(int number, string description, int complexity)
-            : base( number, description, complexity)
+        public TechicalDebt(string description, int complexity, double priority = 0.5)
+            : base(description, complexity, priority)
         {
         }
     }

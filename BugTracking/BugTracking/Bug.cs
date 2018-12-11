@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace BugTracking
 {
-    class Bug:Task
+    class Bug : Task
     {
         public Task Feature { get; set; }
-        public const int Priority = 2;
 
-        public Bug(int number, string description, int complexity, Task feature)
-            :base(number, description, complexity)
+        public Bug(string description, int complexity, Task feature = null, double priority = 2)
+            : base(description, complexity, priority)
         {
             Feature = feature;
         }

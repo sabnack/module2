@@ -8,17 +8,21 @@ namespace BugTracking
 {
     abstract class Task
     {
-        public int Number { get; set; }
+        public static int Number { get; set; }
         public string Description { get; set; }
         public string Status { get; set; }
         public int Complexity { get; set; }
+        public double Priority { get; set; }
+        public int Id;
 
-        public Task(int number, string description, int complexity, string status = "ToDo")
+        public Task(string description, int complexity, double priority, string status = "ToDo")
         {
-            Number = number;
+            Number++;
             Description = description;
             Status = status;
             Complexity = complexity;
+            Priority = priority;
+            Id = Number;
         }
     }
 }
