@@ -10,6 +10,7 @@ namespace BugTracking
     {
         static void Main(string[] args)
         {
+            new Iteration().StartProgram();
         }
     }
 }
