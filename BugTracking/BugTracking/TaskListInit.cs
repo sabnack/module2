@@ -14,6 +14,7 @@ namespace BugTracking
         {
             tasksList = new List<Task>();
             Random rnd = new Random();
+
             for (int i = 0; i < 10; i++)
             {
                 int choice = rnd.Next(3);

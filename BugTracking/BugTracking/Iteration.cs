@@ -8,14 +8,17 @@ namespace BugTracking
 {
     class Iteration
     {
-        TaskListInit _taskListInit = new TaskListInit();
-        List<Task> _tasksList = new List<Task>();
-        List<Task> _temporaryList = new List<Task>();
-        int _namberOfIterationItems = 3;
-        int _namberIteration = 10;
+        TaskListInit _taskListInit { get; }
+        List<Task> _tasksList { get; }
+        List<Task> _temporaryList { get; }
+        readonly int _namberOfIterationItems = 3;
+        readonly int _namberIteration = 10;
 
         public Iteration()
         {
+            _taskListInit = new TaskListInit();
+            _tasksList = new List<Task>();
+            _temporaryList = new List<Task>();
             _tasksList = _taskListInit.GetTasksList();
         }
 
